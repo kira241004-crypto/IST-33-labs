@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 7 - Тарифы</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Выберите подписку</h1>
+            <p class="subtitle">выберите план, соответствующий вашим потребностям</p>
+        </div>
+    </header>
+
+    <div class="layout-wrapper container">
+        <nav class="site-nav">
+            <label for="view-selector">Вид:</label>
+            <select id="view-selector">
+                <option value="auto">Автоматически</option>
+                <option value="desktop">Desktop</option>
+                <option value="mobile">Mobile</option>
+            </select>
+        </nav>
+
+        <main class="content-main">
+            <div class="pricing-grid">
+                <!-- Plan: Start -->
+                <div class="card pricing-card">
+                    <div class="card-header">
+                        <h2>Старт</h2>
+                        <div class="price">Бесплатно</div>
+                        <div class="price-desc">Бесплатная регистрация</div>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="check">✔</span> 50 поколений изображений</li>
+                        <li><span class="check">✔</span> 500 кредитов</li>
+                        <li><span class="check">✔</span> Ежемесячно 100 кредитов бесплатно</li>
+                        <li><span class="check">✔</span> Поддержка клиентов</li>
+                        <li><span class="check">✔</span> Выделенный сервер</li>
+                        <li><span class="check">✔</span> Приоритетные поколения</li>
+                        <li><span class="check">✔</span> 50 ГБ облачного хранилища</li>
+                    </ul>
+                    <button class="btn btn-outline">Начать</button>
+                </div>
+
+                <!-- Plan: Business -->
+                <div class="card pricing-card featured">
+                    <div class="card-header">
+                        <h2>Бизнес</h2>
+                        <div class="price">4500/мес.</div>
+                        <div class="price-desc">7-дневная бесплатная пробная версия</div>
+                    </div>
+                    <div class="card-body">
+                        <p class="plan-includes">План включает в себя</p>
+                        <ul class="features-list">
+                            <li><span class="check">✔</span> 600 поколений изображений</li>
+                            <li><span class="check">✔</span> 4000 кредитов</li>
+                            <li><span class="check">✔</span> Ежемесячно 2000 кредитов бесплатно</li>
+                            <li><span class="check">✔</span> Поддержка клиентов</li>
+                            <li><span class="check">✔</span> Выделенный сервер</li>
+                            <li><span class="check">✔</span> Приоритетные поколения</li>
+                            <li><span class="check">✔</span> 1000 ГБ облачного хранилища</li>
+                        </ul>
+                        <button class="btn btn-primary">Начать</button>
+                    </div>
+                </div>
+
+                <!-- Plan: Profi -->
+                <div class="card pricing-card">
+                    <div class="card-header">
+                        <h2>Профи</h2>
+                        <div class="price">2000/мес.</div>
+                        <div class="price-desc">7-дневная бесплатная пробная версия</div>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="check">✔</span> 300 поколений изображений</li>
+                        <li><span class="check">✔</span> 2000 кредитов</li>
+                        <li><span class="check">✔</span> Ежемесячно 1000 кредитов бесплатно</li>
+                        <li><span class="check">✔</span> Поддержка клиентов</li>
+                        <li><span class="check">✔</span> Выделенный сервер</li>
+                        <li><span class="check">✔</span> Приоритетные поколения</li>
+                        <li><span class="check">✔</span> 500 ГБ облачного хранилища</li>
+                    </ul>
+                    <button class="btn btn-outline">Начать</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Footer Content</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
