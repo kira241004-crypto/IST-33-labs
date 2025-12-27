@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Дорожные знаки</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip .ui-tooltip {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img",
+                content: function () {
+                    var $element = $(this);
+                    if ($element.is("img")) {
+                        return $element.data('hint');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Дорожные знаки</h1>
+    <p>
+        <img src="img/signs/1_1.svg" class="tooltip" data-hint="Знак 1.1" alt="Знак 1.1" width="100">
+        <img src="img/signs/1_2.svg" class="tooltip" data-hint="Знак 1.2" alt="Знак 1.2" width="100">
+        <img src="img/signs/1_5.svg" class="tooltip" data-hint="Знак 1.5" alt="Знак 1.5" width="100">
+        <img src="img/signs/1_6.svg" class="tooltip" data-hint="Знак 1.6" alt="Знак 1.6" width="100">
+        <img src="img/signs/1_7.svg" class="tooltip" data-hint="Знак 1.7" alt="Знак 1.7" width="100">
+    </p>
+    <p>
+        <img src="img/signs/1_10.svg" class="tooltip" data-hint="Знак 1.10" alt="Знак 1.10" width="100">
+        <img src="img/signs/1_11_1.svg" class="tooltip" data-hint="Знак 1.11.1" alt="Знак 1.11.1" width="100">
+        <img src="img/signs/1_11_2.svg" class="tooltip" data-hint="Знак 1.11.2" alt="Знак 1.11.2" width="100">
+        <img src="img/signs/1_12_1.svg" class="tooltip" data-hint="Знак 1.12.1" alt="Знак 1.12.1" width="100">
+        <img src="img/signs/1_12_2.svg" class="tooltip" data-hint="Знак 1.12.2" alt="Знак 1.12.2" width="100">
+    </p>
+    <p>
+        <img src="img/signs/1_13.svg" class="tooltip" data-hint="Знак 1.13" alt="Знак 1.13" width="100">
+        <img src="img/signs/1_14.svg" class="tooltip" data-hint="Знак 1.14" alt="Знак 1.14" width="100">
+        <img src="img/signs/1_15.svg" class="tooltip" data-hint="Знак 1.15" alt="Знак 1.15" width="100">
+        <img src="img/signs/1_16.svg" class="tooltip" data-hint="Знак 1.16" alt="Знак 1.16" width="100">
+        <img src="img/signs/1_17.svg" class="tooltip" data-hint="Знак 1.17" alt="Знак 1.17" width="100">
+    </p>
+    <p>
+        <img src="img/signs/1_18.svg" class="tooltip" data-hint="Знак 1.18" alt="Знак 1.18" width="100">
+        <img src="img/signs/1_19.svg" class="tooltip" data-hint="Знак 1.19" alt="Знак 1.19" width="100">
+        <img src="img/signs/1_20_1.svg" class="tooltip" data-hint="Знак 1.20.1" alt="Знак 1.20.1" width="100">
+        <img src="img/signs/1_20_2.svg" class="tooltip" data-hint="Знак 1.20.2" alt="Знак 1.20.2" width="100">
+        <img src="img/signs/1_20_3.svg" class="tooltip" data-hint="Знак 1.20.3" alt="Знак 1.20.3" width="100">
+    </p>
+    <p>
+        <img src="img/signs/1_21.svg" class="tooltip" data-hint="Знак 1.21" alt="Знак 1.21" width="100">
+        <img src="img/signs/1_22.svg" class="tooltip" data-hint="Знак 1.22" alt="Знак 1.22" width="100">
+        <img src="img/signs/1_23.svg" class="tooltip" data-hint="Знак 1.23" alt="Знак 1.23" width="100">
+        <img src="img/signs/1_24.svg" class="tooltip" data-hint="Знак 1.24" alt="Знак 1.24" width="100">
+        <img src="img/signs/1_25.svg" class="tooltip" data-hint="Знак 1.25" alt="Знак 1.25" width="100">
+    </p>
+    <p>
+        <img src="img/signs/2_5.svg" class="tooltip" data-hint="Знак 2.5" alt="Знак 2.5" width="100">
+        <img src="img/signs/2_4.svg" class="tooltip" data-hint="Знак 2.4" alt="Знак 2.4" width="100">
+        <img src="img/signs/2_6.svg" class="tooltip" data-hint="Знак 2.6" alt="Знак 2.6" width="100">
+        <img src="img/signs/3_1.svg" class="tooltip" data-hint="Знак 3.1" alt="Знак 3.1" width="100">
+        <img src="img/signs/3_2.svg" class="tooltip" data-hint="Знак 3.2" alt="Знак 3.2" width="100">
+    </p>
+    <p>
+        <img src="img/signs/3_3.svg" class="tooltip" data-hint="Знак 3.3" alt="Знак 3.3" width="100">
+        <img src="img/signs/3_4.svg" class="tooltip" data-hint="Знак 3.4" alt="Знак 3.4" width="100">
+        <img src="img/signs/3_5.svg" class="tooltip" data-hint="Знак 3.5" alt="Знак 3.5" width="100">
+        <img src="img/signs/3_6.svg" class="tooltip" data-hint="Знак 3.6" alt="Знак 3.6" width="100">
+        <img src="img/signs/3_7.svg" class="tooltip" data-hint="Знак 3.7" alt="Знак 3.7" width="100">
+    </p>
+    <p>
+        <img src="img/signs/3_10.svg" class="tooltip" data-hint="Знак 3.10" alt="Знак 3.10" width="100">
+        <img src="img/signs/3_13.svg" class="tooltip" data-hint="Знак 3.13" alt="Знак 3.13" width="100">
+        <img src="img/signs/3_24.svg" class="tooltip" data-hint="Знак 3.24" alt="Знак 3.24" width="100">
+        <img src="img/signs/3_27.svg" class="tooltip" data-hint="Знак 3.27" alt="Знак 3.27" width="100">
+        <img src="img/signs/5_2.svg" class="tooltip" data-hint="Знак 5.2" alt="Знак 5.2" width="100">
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('img/bg_todo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 40%;
+    min-width: 450px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+}
+
+#newtask {
+    position: relative;
+    padding: 10px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#newtask input {
+    width: 80%;
+    /* Increased width as requested */
+    height: 50px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+#newtask input:focus {
+    outline: none;
+    border-color: #0d75ec;
+}
+
+#newtask button {
+    width: 18%;
+    /* Adjusted width */
+    height: 50px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#newtask button:hover {
+    background-color: #0a58b0;
+}
+
+#tasks {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.task {
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 60px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    display: flex;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+}
+
+.task span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.task button {
+    background-color: transparent;
+    color: #e74c3c;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.task button:hover {
+    color: #c0392b;
+}
+
+/* SVG Styling */
+svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
