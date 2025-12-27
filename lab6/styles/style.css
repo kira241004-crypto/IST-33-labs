@@ -1,0 +1,206 @@
+/* CSS RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centers vertically if height fits, otherwise top aligns via scroll */
+  min-height: 100vh;
+  padding: 40px 0;
+  /* Vertical breathing room */
+}
+
+/* CONTAINER */
+.container {
+  width: 60%;
+  max-width: 1200px;
+  /* Safety cap */
+  min-width: 600px;
+  /* Safety min */
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.main-header {
+  position: relative;
+  width: 100%;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.6);
+  /* Darken slightly for readability */
+}
+
+.header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.header-overlay h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* CONTENT */
+.content {
+  padding: 40px 60px;
+}
+
+.intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.separator {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+ol {
+  list-style: none;
+  /* Removing default numbers to handle custom structure if needed, or keeping standard */
+  /* User text has "1. For dough:", so we might want to suppress default numbers or use them. */
+  /* The text in HTML had "1. Для теста:" inside the LI content. So standard <ol> would double number "1. 1. For dough". */
+  /* I removed "1." from HTML? No, I kept them in "1. Для теста:". */
+  /* So I should use list-style: none for the outer OL */
+}
+
+.ingredients-section ol>li,
+.preparation-section ol>li {
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
+/* Nested lists */
+ul {
+  list-style-type: disc;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* INFO PANEL */
+.info-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.info-text {
+  font-size: 1.2rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.info-icon {
+  width: 40px;
+  height: auto;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.info-item:hover .info-icon {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.info-item:hover .info-text {
+  color: #000;
+  font-weight: bold;
+}
+
+.footer-msg {
+  margin-top: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+    min-width: auto;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .header-overlay h1 {
+    font-size: 2rem;
+  }
+}
