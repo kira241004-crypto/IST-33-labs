@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторая работа №5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="user-profile">
+                <img src="images/Kirik.jpg" alt="photo" class="avatar-full">
+                <div class="profile-info">
+                    <span class="profile-name">Шулепов Кирилл Иванович</span>
+                    <span class="profile-role">Студент</span>
+                </div>
+            </div>
+
+            <nav class="top-nav">
+                <a href="#" class="nav-link active">Новый</a>
+                <a href="#" class="nav-link">Мужчины</a>
+                <a href="#" class="nav-link">Женщины</a>
+                <a href="#" class="nav-link">Дети</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Найдите что-нибудь" class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <div class="action-icons">
+                    <div class="icon-item">
+                        <span class="icon-symbol">♡</span> <!-- Heart placeholder -->
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="icon-item">
+                        <span class="icon-symbol">🛒</span> <!-- Cart placeholder -->
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+
+                <button class="login-btn">Войти</button>
+            </div>
+        </header>
+
+        <!-- Sidebar Navigation (Dark Theme) -->
+        <!-- Sidebar Navigation (Light Theme Variant 2) -->
+        <nav class="sidebar">
+            <div class="sidebar-profile-section">
+                <img src="images/kirik.jpg" alt="Шулепов Кирилл Иванович" class="avatar-sidebar">
+                <div class="sidebar-profile-info">
+                    <span class="sb-name">Шулепов Кирилл Иванович</span>
+                    <span class="sb-role">Студент</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <!-- Single Item -->
+                <a href="#" class="sidebar-item">
+                    <span class="icon">⊞</span>
+                    <span>Панель инструментов</span>
+                </a>
+
+                <!-- Section: Information -->
+                <div class="menu-category">
+                    <div class="category-title">Информация</div>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">👥</span>
+                        <span>Аудитория</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">⊕</span>
+                        <span>Посты</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">🕒</span>
+                        <span>Расписания</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">📢</span>
+                        <span>Продвигать</span>
+                    </a>
+                </div>
+
+                <!-- Section: Income -->
+                <div class="menu-category">
+                    <div class="category-title">Доход</div>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">💰</span>
+                        <span>Доходы и налоги</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">↺</span>
+                        <span>Возвраты</span>
+                    </a>
+                </div>
+
+                <!-- Section: Actions -->
+                <div class="menu-category">
+                    <div class="category-title">Действия</div>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">👤</span>
+                        <span>Профиль</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="icon">⏻</span>
+                        <span>Выйти</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="dashboard">
+                <h1>Добро пожаловать, Кирик!</h1>
+                <p class="subtitle">Ваш новый дашборд готов к работе.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Активность</h3>
+                        <p class="stat-value">89%</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (Light Green Contact Theme) -->
+        <!-- Footer (Newsletter & Links Variant) -->
+        <footer class="footer">
+            <div class="newsletter-section">
+                <h2>Информационный бюллетень</h2>
+                <p>Подпишитесь на нашу рассылку и будьте в курсе последних новостей, обновлений и эксклюзивных
+                    предложений. Получите ценную информацию. Присоединяйтесь к нашему сообществу сегодня!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Введите свой адрес электронной почты" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Представлять на рассмотрение</button>
+                </form>
+            </div>
+
+            <div class="footer-columns">
+                <!-- Column 1: Branding/About text? Image shows just "О нас" -->
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <a href="#">Веб-разработка</a>
+                    <a href="#">Разработка мобильных приложений</a>
+                    <a href="#">UI/UX-дизайн</a>
+                    <a href="#">Цифровой Маркетинг</a>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="footer-column">
+                    <h3>Ресурсы</h3>
+                    <a href="#">Вебинары</a>
+                    <a href="#">Электронные книги</a>
+                    <a href="#">Шаблоны</a>
+                    <a href="#">Учебники</a>
+                </div>
+
+                <!-- Column 4: About Links -->
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <a href="#">Наша история</a>
+                    <a href="#">Миссия и ценности</a>
+                    <a href="#">Команда</a>
+                    <a href="#">Отзывы</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

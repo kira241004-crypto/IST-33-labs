@@ -1,0 +1,468 @@
+/* Modern Reset & Variables */
+:root {
+    --primary-color: #8b5cf6;
+    /* Lighter Violet for Dark Mode */
+    --primary-hover: #7c3aed;
+    --text-color: #f9fafb;
+    /* Light Text */
+    --text-muted: #9ca3af;
+    /* Gray Text */
+    --bg-color: #111827;
+    /* Dark Background */
+    --card-bg: #1f2937;
+    /* Dark Gray Card */
+    --sidebar-bg: #1f2937;
+    --footer-bg: #111827;
+    --border-color: #374151;
+    /* Dark Border */
+    --input-bg: #374151;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --radius: 0.5rem;
+    --transition: all 0.2s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius);
+    overflow: hidden;
+    min-height: 85vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    z-index: 10;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.user-profile:hover {
+    opacity: 0.8;
+}
+
+.user-profile .avatar-full {
+    height: 48px;
+    /* Adjusted size for header */
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.profile-role {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.top-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    /* Default black/dark gray */
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #3b82f6;
+    /* Blue for active state */
+}
+
+/* Remove the underline effect from previous design if not needed, or keep simplistic */
+.nav-link.active::after {
+    display: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+
+    /* Pill shape */
+    padding: 0.4rem 1rem;
+    width: 220px;
+    justify-content: space-between;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-icon {
+    font-size: 1rem;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.action-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon-symbol {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #ef4444;
+    /* Red badge */
+    color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.login-btn {
+    background-color: #007bff;
+    /* Bright Blue */
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    /* Pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    box-shadow: none;
+}
+
+.login-btn:hover {
+    background-color: #0069d9;
+    transform: translateY(-1px);
+}
+
+/* Sidebar Navigation (Dark Theme) */
+.sidebar {
+    grid-area: nav;
+    background-color: var(--card-bg);
+    /* Dark Gray */
+    color: var(--text-color);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-right: 1px solid var(--border-color);
+    /* Add border since it's same bg */
+}
+
+.sidebar-profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.avatar-sidebar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.sb-role {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* Gap between categories */
+}
+
+.menu-category {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #3b82f6;
+    /* Blue title */
+    margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.6rem 0.5rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.sidebar-item:hover {
+    background-color: #374151;
+    /* Dark gray hover */
+    color: #3b82f6;
+    /* Blue text on hover */
+}
+
+.sidebar-item:hover .icon {
+    color: #3b82f6;
+}
+
+.icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    /* Gray icons by default */
+    transition: var(--transition);
+}
+
+
+/* Main Content */
+/* Main Content */
+.main-content {
+    grid-area: main;
+    padding: 3rem;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 800px;
+}
+
+.dashboard h1 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+/* Footer (Dark Theme) */
+.footer {
+    grid-area: footer;
+    background-color: var(--bg-color);
+    /* Dark background */
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-top: none;
+}
+
+.newsletter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.newsletter-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    /* Light text */
+    margin-bottom: 0.8rem;
+}
+
+.newsletter-section p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    display: flex;
+    width: 100%;
+    background-color: var(--input-bg);
+    border-radius: 50px;
+    padding: 3px;
+    position: relative;
+    max-width: 480px;
+}
+
+.newsletter-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #9ca3af;
+}
+
+.newsletter-btn {
+    background-color: #374151;
+    /* Dark slate */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+.newsletter-btn:hover {
+    background-color: #1f2937;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 900px;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-column h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+}
